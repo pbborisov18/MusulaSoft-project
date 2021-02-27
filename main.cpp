@@ -6,17 +6,20 @@
 
 using namespace std;
 
-void studentsAdd();     //function which adds students to the excel
-void teacherAdd();      //function which adds teams to the excel
-void teamsAdd();        //function which adds teachers to the excel
-void studentsEdit();    //function which edits students in the excel
-void teamsEdit();       //function which edits teams in the excel
-void teachersEdit();    //function which edits teachers in the excel
-void studentsDelete();  //function which deletes students off the excel
-void teamsDelete();     //function which deletes teams off the excel
-void teachersDelete();  //function which deletes teachers off the excel
+void studentAdd();     //function which adds students to Students.csv
+void teacherAdd();      //function which adds teachers to Teachers.csv
+void teamsAdd();        //function which adds teams to Teams.csv
+void studentsEdit();    //function which edits students information in Students.csv
+void teachersEdit();    //function which edits teachers information in Teachers.csv
+void teamsEdit();       //function which edits teams information in Teams.csv
+void studentsDelete();  //function which deletes students off Students.csv
+void teachersDelete();  //function which deletes teachers off Teachers.csv
+void teamsDelete();     //function which deletes teams off Teams.csv
 void searchTeams();     //search function for teams
-void searchNames();     //search function for names
+void searchStudents();  //search function for students
+void searchTeachers();  //search function for teachers
+void searchStudentsTm();//search function for students in teams menu
+void searchTeachersTm();//search function for teachers in teams menu
 void mainMenu();        //function main menu
 
 int main()

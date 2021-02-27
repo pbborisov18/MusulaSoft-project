@@ -8,8 +8,6 @@ using namespace std;
 
 void teamMenu(){
 
-
-
     system("cls");
     cout << "      Team Editor \n\n";
     cout << "1.Add Team \n";
@@ -47,4 +45,3 @@ void teamMenu(){
     }
 
 }
-

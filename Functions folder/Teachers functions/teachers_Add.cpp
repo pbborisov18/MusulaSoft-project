@@ -8,6 +8,7 @@ void teacherMenu();
 struct TEACHERS{
     string firstName;
     string lastName;
+    string eMail;
     int inUse;
 } teacher;
 
@@ -16,6 +17,8 @@ void teacherAdd(){
     cin >> teacher.firstName;
     cout << "Enter Last Name:";
     cin >> teacher.lastName;
+    cout << "Enter Email:";
+    cin >> teacher.eMail;
     cout << "In how many teams:";
     cin >> teacher.inUse;
     while(teacher.inUse<0){
@@ -26,7 +29,7 @@ void teacherAdd(){
 
     file.open("Teachers.csv", ios::app);
 
-    file << teacher.firstName << "," << teacher.lastName << "," << teacher.inUse << endl;
+    file << teacher.firstName << "," << teacher.lastName << "," << teacher.eMail << "," << teacher.inUse << endl;
 
     file.close();
 
