@@ -4,14 +4,16 @@
 #include <vector>
 using namespace std;
 
-void teamMenu();
-void searchStudentsTm();
-void searchTeachers();
-vector<string> searchStudentTeam(string fileNameS, string searchTermS);
-vector<string> searchTeacherTeam(string fileNameT, string searchTermT);
-void changeStudentTeam(string studentName,string studentTeam);
+void fileExists(string test);   //Link to a function which checks if a file is created
+void teamMenu();                                                        //Links this cpp file to the team menu
+void searchStudentsTm();                                                //Links this cpp file to search students for a team function
+void searchTeachers();                                                  //Links this cpp file to search teachers for a team function
+vector<string> searchStudentTeam(string searchTermS); //Search for the student in Students.csv
+vector<string> searchTeacherTeam(string searchTermT); //Search for the student in Teachers.csv
+void changeStudentTeam(string studentName,string studentTeam);          //Changes students team so they can't be in more than 1 team
+void changeTeacherTeam(string teacherName);                             //Changes the number of teams of the teacher
 
-struct TEAMS{
+struct TEAMS{   //Structure for entering a teams information
     string teamName;
     string teammate1;
     string teammate2;
@@ -23,51 +25,42 @@ struct TEAMS{
 void teamsAdd(){
     cout << "Choose team name:";
     cin.ignore( 1000, '\n' );
-    getline(cin,team.teamName);
+    getline(cin,team.teamName); //User enters the team name
 
+    cout << "Choose student 1(Email): ";
+    cin >> team.teammate1;  //User enters the 1st student email
+    vector<string> data1 = searchStudentTeam(team.teammate1);    //Goes to this function and looks if this email is in Students.csv
+    changeStudentTeam(data1[2],team.teamName);  //Goes to the function which changes the students team to the team name chosen at the start of the creation process
 
-    cout << "Choose student 1. ";
+    cout << "Choose student 2(Email): ";
+    cin >> team.teammate2;  //User enters the 2nd student email
+    vector<string> data2 = searchStudentTeam(team.teammate2);    //Goes to this function and looks if this email is in Students.csv
+    changeStudentTeam(data2[2],team.teamName);  //Goes to the function which changes the students team to the team name chosen at the start of the creation process
 
-    cin >> team.teammate1;
-    vector<string> data1 = searchStudentTeam("Students.csv",team.teammate1);
-    changeStudentTeam(data1[0],team.teamName);
+    cout << "Choose student 3(Email): ";
+    cin >> team.teammate3;  //User enters the 3rd student email
+    vector<string> data3 = searchStudentTeam(team.teammate3);    //Goes to this function and looks if this email is in Students.csv
+    changeStudentTeam(data3[2],team.teamName);  //Goes to the function which changes the students team to the team name chosen at the start of the creation process
 
-    cout << "Choose student 2. ";
+    cout << "Choose student 4(Email): ";
+    cin >> team.teammate4;  //User enters the 3th student email
+    vector<string> data4 = searchStudentTeam(team.teammate4);    //Goes to this function and looks if this email is in Students.csv
+    changeStudentTeam(data4[2],team.teamName);  //Goes to the function which changes the students team to the team name chosen at the start of the creation process
 
-    cin >> team.teammate2;
-    vector<string> data2 = searchStudentTeam("Students.csv",team.teammate2);
-    changeStudentTeam(data2[0],team.teamName);
-
-    cout << "Choose student 3. ";
-
-    cin >> team.teammate3;
-    vector<string> data3 = searchStudentTeam("Students.csv",team.teammate3);
-    changeStudentTeam(data3[0],team.teamName);
-
-    cout << "Choose student 4. ";
-
-    cin >> team.teammate4;
-    vector<string> data4 = searchStudentTeam("Students.csv",team.teammate4);
-    changeStudentTeam(data4[0],team.teamName);
-
-    cout << "Choose Leader. ";
-
-    cin >> team.teacher;
-    vector<string> data5 = searchTeacherTeam("Teachers.csv",team.teacher);
-
+    cout << "Choose Leader(Email): ";
+    cin >> team.teacher;    //User enters the teacher's email
+    vector<string> data5 = searchTeacherTeam(team.teacher);      //Goes to this function and looks if this email is in Teachers.csv
+    changeTeacherTeam(data5[2]);    //Goes to the function which changes the number of teams the teacher is in
 
     fstream file;
 
-    file.open("Teams.csv", ios::app);
+    fileExists("Teams.csv"); //Checks if Teams.csv exists otherwise it creates it
 
-        file << team.teamName << "," << data1[0] << data1[1] << "," << data2[0] << data2[1] << "," << data3[0] << data3[1] << "," << data4[0] << data4[1] << "," << data5[0] << data5[1] << "\n";
+    file.open("Teams.csv", ios::app); //Opens the file Teams.csv
 
-    file.close();
+        file << team.teamName << "," << data1[2] << "," << data2[2] << "," << data3[2] << "," << data4[2] << "," << data5[2] << "\n"; //Writes the team name, students emails and teachers email
 
+    file.close();   //Closes Teams.csv
 
-
-
-
-
-    teamMenu();
+    teamMenu();     //Goes back to team menu
 }

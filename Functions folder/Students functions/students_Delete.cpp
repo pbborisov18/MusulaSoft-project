@@ -8,13 +8,16 @@
 #include <stdio.h>
 using namespace std;
 
+void fileExists(string test);   //Link to a function which checks if a file is created
 void studentMenu(); //Link to student menu
 
-vector<string> studentDelete(){
+void studentsDelete(){
 
     cout << "Name of the student wanted to be deleted:";
     string searchTerm;
     cin >> searchTerm; //User enters the name of the student who must be deleted
+
+    fileExists("Students.csv"); //Checks if Students.csv exists otherwise it creates it
 
     fstream fileCreate {"StudentsTemp.csv"}; //Creates a temporary file
 

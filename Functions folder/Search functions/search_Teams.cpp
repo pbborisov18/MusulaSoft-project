@@ -8,12 +8,12 @@ using namespace std;
 
 void searchMenu();  //Links to the search menu
 
-vector<string> searchTeam(string fileName, string searchTerm){ //Creates a function of type vector<string> with variables fileName(The name of the file which is Students.csv) and the searchTerm(The name for which we are searching for)
+void searchTeam(string searchTerm){ //Creates a function with variable searchTerm(The name for which we are searching for)
 
     vector<string> record; //temporary vector which is used to record the information gathered by the function
 
     ifstream file;
-    file.open(fileName); //Opens the file from the variable fileName() in this case Students.csv
+    file.open("Teams.csv"); //Opens the file Teams.csv
 
     bool foundRecord = false;
 
@@ -44,32 +44,18 @@ vector<string> searchTeam(string fileName, string searchTerm){ //Creates a funct
         }
     }
 
-if(foundRecord==true){  //If we found the student we display the information about him
-        cout << "Team Name: " << record[0] << "\n"
+if(foundRecord==true){  //If we found the team we display the information about him
+        cout << "\nTeam Name: " << record[0] << "\n"
              << "Student1: " << record[1] << "\n"
              << "Student2: " << record[2] << "\n"
              << "Student3: " << record[3] << "\n"
              << "Student4 " << record[4] << "\n"
-             << "Teacher: " << record[5] << "\n";
+             << "Teacher: " << record[5] << "\n\n";
 }
-else{   //Otherwise we tell the user the student was not found
+else{   //Otherwise we tell the user the team was not found
     cout << "Team was not found!\n";
 }
-return record; //
 
-}
-
-void searchTeams(){
-
-    cout<<"Enter Team Name: ";
-
-    string name;
-    cin >> name; //User's search
-
-    searchTeam("Teams.csv",name); //we call the function
-
-    system("pause");//Bad practise because users who use different os won't work. Pauses the program so the user can read what he searched for
-    searchMenu();
 
 }
 

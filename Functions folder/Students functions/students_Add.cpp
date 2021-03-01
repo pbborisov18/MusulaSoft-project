@@ -3,6 +3,7 @@
 #include <string>
 using namespace std;
 
+void fileExists(string test);   //Link to a function which checks if a file is created
 void studentMenu(); //Link to last menu
 
 struct STUDENTS{    //Structure used for entering students information
@@ -15,7 +16,7 @@ struct STUDENTS{    //Structure used for entering students information
 } student;
 
 
-void studentAdd(){
+void studentsAdd(){
 
     cout << "Enter First Name:"; //User entering students information
     cin >> student.firstName;
@@ -31,6 +32,8 @@ void studentAdd(){
     cin >> student.inUse;
 
     fstream file;
+
+    fileExists("Students.csv"); //Checks if Students.csv exists otherwise it creates it
 
     file.open("Students.csv", ios::app); //Open Students.csv in append mode
 

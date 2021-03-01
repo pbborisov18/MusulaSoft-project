@@ -8,12 +8,12 @@ using namespace std;
 
 void searchMenu();  //Links to the search menu
 
-vector<string> searchStudent(string fileName, string searchTerm){ //Creates a function of type vector<string> with variables fileName(The name of the file which is Students.csv) and the searchTerm(The name for which we are searching for)
+void searchStudent(string searchTerm){ //Creates a function with variable searchTerm(The email for which we are searching for)
 
     vector<string> record; //temporary vector which is used to record the information gathered by the function
 
-    ifstream file;
-    file.open(fileName); //Opens the file from the variable fileName() in this case Students.csv
+    ifstream file;          //Creates variable file
+    file.open("Students.csv");    //Opens the file from the variable fileName() in this case Students.csv
 
     bool foundRecord = false;
 
@@ -31,9 +31,9 @@ vector<string> searchStudent(string fileName, string searchTerm){ //Creates a fu
         getline(file,classv,',');
         getline(file,inATeam,'\n');
 
-        if(firstName == searchTerm){ //If the name is found it enteres the if() statement
+        if(email == searchTerm){ //If the email is found it enters the if() statement
 
-            foundRecord=true; //After the name is found there is no point to look for it anymore
+            foundRecord=true; //After the email is found there is no point to look for it anymore
 
             record.push_back(firstName);    //Saves the information in the record vector
             record.push_back(secondName);
@@ -45,30 +45,16 @@ vector<string> searchStudent(string fileName, string searchTerm){ //Creates a fu
     }
 
 if(foundRecord==true){  //If we found the student we display the information about him
-        cout << "First Name: " << record[0] << "\n"
+        cout << "\nFirst Name: " << record[0] << "\n"
              << "Last Name: " << record[1] << "\n"
              << "Email: " << record[2] << "\n"
              << "Preferred position: " << record[3] << "\n"
              << "Class: " << record[4] << "\n"
-             << "Team: "<< record[5] << "\n";
+             << "Team: "<< record[5] << "\n\n";
 }
 else{   //Otherwise we tell the user the student was not found
     cout << "Student was not found!\n";
 }
-return record; //
 
-}
-
-void searchStudents(){
-
-    cout<<"Enter Student Name: ";
-
-    string name;
-    cin >> name; //User's search
-
-    searchStudent("Students.csv",name); //we call the function
-
-    system("pause");//Bad practise because users who use different os won't work. Pauses the program so the user can read what he searched for
-    searchMenu();
 
 }
