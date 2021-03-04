@@ -1,19 +1,18 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <sstream>
-#include <cstdlib>
-#include <cstdio>
 #include <vector>
-#include <stdio.h>
 using namespace std;
 
 void fileExists(string test);   //Link to a function which checks if a file is created
 void studentMenu(); //Link to student menu
+void connectionsRemoveStudentTeam(string studentEmail);
 
 void studentsDelete(){
 
-    cout << "Name of the student wanted to be deleted:";
+    vector<string> conStudentChangeTeam;
+
+    cout << "Email of the student wanted to be deleted:";
     string searchTerm;
     cin >> searchTerm; //User enters the name of the student who must be deleted
 
@@ -39,7 +38,7 @@ void studentsDelete(){
         getline(file,classv,',');
         getline(file,inATeam,'\n');
 
-        if(firstName != searchTerm){ //If the name of the student isn't what the user wants deleted we enter the if() statement
+        if(email != searchTerm){ //If the name of the student isn't what the user wants deleted we enter the if() statement
 
             vector<string> record; //Vector temporary used to save students information from the variables earlier
 
@@ -54,6 +53,9 @@ void studentsDelete(){
 
             record.clear(); //Clears the vector of all varibles. Resets it
         }
+        else{
+            connectionsRemoveStudentTeam(email);
+        }
     }
 
     fileCreate.close(); //Closes StudentsTemp.csv
@@ -61,6 +63,9 @@ void studentsDelete(){
 
     remove("Students.csv"); //Delets Students.csv
     rename("StudentsTemp.csv", "Students.csv"); //Renames the temporary file StudentsTemp.csv to Students.csv
+
+    cout << "Student successfully deleted from Students.csv and Teams.csv\n"; //Confirmation to the user
+    system("pause");
 
     studentMenu();  //Goes back to the student menu
 

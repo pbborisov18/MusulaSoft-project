@@ -6,7 +6,7 @@
 #include <sstream>
 using namespace std;
 
-void changeTeacherTeam(string teacherName){ //Changes the number of teams the teacher is in
+void connectionsChangeTeacherTeam(string teacherEmail){ //Changes the number of teams the teacher is in
 
     ifstream file;
     fstream fileNew{"TeachersTemp.csv"}; //creates a temporary file to write the new data to
@@ -26,7 +26,7 @@ void changeTeacherTeam(string teacherName){ //Changes the number of teams the te
             getline(file,email,',');
             getline(file,inATeam,'\n');
 
-        if(email != teacherName){ //We enter the if statement if the name of the teacher isn't what we want to edit
+        if(email != teacherEmail){ //We enter the if statement if the name of the teacher isn't what we want to edit
 
             vector<string> record; //Vector temporary used to save teacher's information from the variables earlier
 

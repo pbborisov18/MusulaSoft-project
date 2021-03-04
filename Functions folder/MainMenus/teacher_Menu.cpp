@@ -40,6 +40,10 @@ void teacherMenu(){
         fileExists("Teachers.csv"); //Checks if the file Teachers.csv exists if not creates it
 
         teachersDelete();   //Goes to the function teacher Delete() where a teacher is deleted from Teachers.csv
+
+        cout << "Teacher successfully deleted";
+        system("pause");
+
     }
 
     if(chooserTeEditor == 3){
