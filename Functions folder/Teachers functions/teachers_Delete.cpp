@@ -1,16 +1,13 @@
-//No connection to Teams.csv
-
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <sstream>
-#include <cstdlib>
-#include <cstdio>
 #include <vector>
 #include <stdio.h>
 using namespace std;
 
-void fileExists(string test);   //Link to a function which checks if a file is created
+void connectionsRemoveTeacherTeam(string email);
+void fileExists(string nameOfFile);   //Link to a function which checks if a file is created
 void teacherMenu(); //Link to teacher menu
 
 void teachersDelete(){
@@ -49,6 +46,9 @@ cout << "Email of the teacher wanted to be deleted:";
             fileCreate << record[0] << "," << record[1] << "," << record[2] << "," << record[3] << "\n"; //Writing the information we got earlier to the temporary file TeachersTemp.csv
 
             record.clear(); //Clears the vector of all varibles. Resets it
+        }
+        else{
+            connectionsRemoveTeacherTeam(email);
         }
     }
 

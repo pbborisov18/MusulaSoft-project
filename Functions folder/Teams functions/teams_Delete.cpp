@@ -5,10 +5,7 @@
 #include <fstream>
 #include <string>
 #include <sstream>
-#include <cstdlib>
-#include <cstdio>
 #include <vector>
-#include <stdio.h>
 using namespace std;
 
 void teamMenu();

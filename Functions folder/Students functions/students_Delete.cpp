@@ -4,7 +4,7 @@
 #include <vector>
 using namespace std;
 
-void fileExists(string test);   //Link to a function which checks if a file is created
+void fileExists(string nameOfFile);   //Link to a function which checks if a file is created
 void studentMenu(); //Link to student menu
 void connectionsRemoveStudentTeam(string studentEmail);
 
