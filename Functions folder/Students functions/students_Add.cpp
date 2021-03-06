@@ -41,5 +41,9 @@ void studentsAdd(){
 
     file.close(); //Closes Students.csv
 
+    cout << "\nStudent successfully added!\n\n";
+
+    system("pause");
+
     studentMenu(); //Goes back to student menu
 }

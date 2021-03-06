@@ -1,6 +1,3 @@
-//No connections to Teachers.csv
-//No connections to Students.csv
-
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -8,10 +5,13 @@
 #include <vector>
 using namespace std;
 
-void teamMenu();
-void fileExists(string nameOfFile);
+void teamMenu();    //Link to team menu
+void fileExists(string nameOfFile); //Link to a function which checks if a file exists
+void connectionsChangeStudentTeamToNo(string teamName); //Link to a function which changes students' team
+void connectionsChangeTeacherTeamDown(string teacherEmail); //Link to a function which changes teachers' number of teams
 
 void teamsDelete(){
+
     cout << "Name of the team wanted to be deleted:";
     string searchTerm;
 
@@ -54,6 +54,10 @@ void teamsDelete(){
             fileCreate << record[0] << "," << record[1] << "," << record[2] << "," << record[3] << "," << record[4] << "," << record[5] << "\n"; //Writing the information we got earlier to the temporary file TeamsTemp.csv
 
             record.clear(); //Clears the vector of all varibles. Resets it
+        }
+        else{   //If the team is found we enter the else statement
+            connectionsChangeStudentTeamToNo(teamName); //The students in the deleted team have their team set to No in Students.csv
+            connectionsChangeTeacherTeamDown(teacher);  //The teacher in the deleted team has his team count go 1 lower
         }
     }
 

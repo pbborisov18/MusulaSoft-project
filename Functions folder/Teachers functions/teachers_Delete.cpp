@@ -6,7 +6,7 @@
 #include <stdio.h>
 using namespace std;
 
-void connectionsRemoveTeacherTeam(string email);
+void connectionsRemoveTeacherFromTeam(string email); //Link to a function which deletes all instances of a teacher in Teams.csv
 void fileExists(string nameOfFile);   //Link to a function which checks if a file is created
 void teacherMenu(); //Link to teacher menu
 
@@ -47,8 +47,8 @@ cout << "Email of the teacher wanted to be deleted:";
 
             record.clear(); //Clears the vector of all varibles. Resets it
         }
-        else{
-            connectionsRemoveTeacherTeam(email);
+        else{   //If the teacher is found we enter this else
+            connectionsRemoveTeacherFromTeam(email);    //Function which all instances of a teacher in Teams.csv
         }
     }
 

@@ -33,11 +33,11 @@ void connectionsChangeTeacherTeamDown(string teacherEmail); //connection from Te
 void teamsEdit();   //function which edits teams information in Teams.csv
 
 /* Search menu*/
-void searchStudents();  //search function for students
+void searchStudents();  //search function for students      Working as expected
 
-void searchTeachers();  //search function for teachers
+void searchTeachers();  //search function for teachers      Working as expected
 
-void searchTeams(); //search function for teams
+void searchTeams(); //search function for teams             Working as expected
 
 
 

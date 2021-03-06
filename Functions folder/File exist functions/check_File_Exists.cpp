@@ -13,7 +13,7 @@ void fileExists(string nameOfFile){ //Function which checks if the file at nameO
    }
 
    else {   //If no creates the file and returns to the function from which it was called
-    ofstream fileCreate {nameOfFile};
+    ofstream fileCreate{nameOfFile};
     return;
    }
 }

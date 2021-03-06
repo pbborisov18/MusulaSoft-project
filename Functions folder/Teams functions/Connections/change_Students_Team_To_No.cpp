@@ -4,7 +4,7 @@
 #include <vector>
 using namespace std;
 
-void connectionsChangeStudentTeam(string studentName,string studentTeam){  //Changes the student's team
+void connectionsChangeStudentTeamToNo(string teamName){  //Changes the students' team in Students.csv to No team
 
     ifstream file;
     fstream fileNew{"StudentsTemp.csv"}; //Creates a temporary file
@@ -28,7 +28,7 @@ void connectionsChangeStudentTeam(string studentName,string studentTeam){  //Cha
             getline(file,classv,',');
             getline(file,inATeam,'\n');
 
-        if(email != studentName){ //We enter the if statement if the name of the student isn't what we want to edit
+        if(inATeam == teamName){ //We enter the if statement if team name is the one we are searching for
 
             record.push_back(firstName); //Saves the information in the temporary vector record
             record.push_back(secondName);
@@ -37,10 +37,10 @@ void connectionsChangeStudentTeam(string studentName,string studentTeam){  //Cha
             record.push_back(classv);
             record.push_back(inATeam);
 
-            fileNew << record[0] << "," << record[1] << "," << record[2] << "," << record[3] << "," << record[4] << "," << record[5] << "\n"; //Writing the information we got earlier to the temporary file StudentsTemp.csv
+            fileNew << record[0] << "," << record[1] << "," << record[2] << "," << record[3] << "," << record[4] << "," << "No" << "\n"; //Writing the same information about the student except the team name which is changed to No because his team was just deleted
             record.clear(); //Clears the vector of all varibles. Resets it
         }
-        else{ //When we find the student we want we enter the if statement and write everything the same except the team's name which we change to the variable of the function studentTeam
+        else{   //If the student is not part of that team everything is written the same
 
             record.push_back(firstName);
             record.push_back(secondName);
@@ -49,8 +49,8 @@ void connectionsChangeStudentTeam(string studentName,string studentTeam){  //Cha
             record.push_back(classv);
             record.push_back(inATeam);
 
-            fileNew << record[0] << "," << record[1] << "," << record[2] << "," << record[3] << "," << record[4] << "," << studentTeam << "\n";
-            record.clear();
+            fileNew << record[0] << "," << record[1] << "," << record[2] << "," << record[3] << "," << record[4] << "," << record[5] << "\n";
+            record.clear(); //Clears the vector of all varibles. Resets it
         }
     }
 
@@ -65,3 +65,4 @@ void connectionsChangeStudentTeam(string studentName,string studentTeam){  //Cha
 return;
 
 }
+

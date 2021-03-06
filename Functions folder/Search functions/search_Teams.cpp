@@ -53,7 +53,7 @@ if(foundRecord==true){  //If we found the team we display the information about 
              << "Teacher: " << record[5] << "\n\n";
 }
 else{   //Otherwise we tell the user the team was not found
-    cout << "Team was not found!\n";
+    cout << "\nTeam was not found!\n\n";
 }
 
 

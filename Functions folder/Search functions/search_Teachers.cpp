@@ -8,7 +8,7 @@ using namespace std;
 
 void searchMenu();  //Links to the search menu
 
-void searchTeacher(string searchTerm){ //Creates a function with variable searchTerm(The email for which we are searching for)
+bool searchTeacher(string searchTerm){ //Creates a function with variable searchTerm(The email for which we are searching for)
 
     vector<string> record; //temporary vector which is used to record the information gathered by the function
 
@@ -42,11 +42,13 @@ void searchTeacher(string searchTerm){ //Creates a function with variable search
         cout << "\nFirst Name: " << record[0] << "\n"
              << "Last Name: " << record[1] << "\n"
              << "Email: " << record[2] << "\n"
-             << "Team: "<< record[3] << "\n\n";
+             << "Teams: "<< record[3] << "\n\n";
+        return true;
     }
 
     else{   //Otherwise we tell the user the teacher was not found
-    cout << "Teacher was not found!\n";
+    cout << "\nTeacher was not found!\n\n";
+    return false;
     }
 
 
