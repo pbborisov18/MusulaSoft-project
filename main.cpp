@@ -30,7 +30,10 @@ void teamsDelete(); //function which deletes teams off Teams.csv
 void connectionsChangeStudentTeamToNo(string teamName); //connection from Teams.csv to Students.csv Used for changing the team to No after deletion of the team
 void connectionsChangeTeacherTeamDown(string teacherEmail); //connection from Teams.csv to Teachers.csv Used for changing the number of teams the teacher is part in
 
-void teamsEdit();   //function which edits teams information in Teams.csv
+void teamsEdit();   //function which searches if a team exists and prints it in the cmd
+
+void teamsEditMenu(string teamToBeEdited);  //A edit menu in which the user can choose what to edit from the team searched earlier
+    void editTeamName(string teamToBeEdited,string editTo); //Edits team
 
 /* Search menu*/
 void searchStudents();  //search function for students      Working as expected
