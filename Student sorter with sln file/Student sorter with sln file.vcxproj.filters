@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Teams functions">
+      <UniqueIdentifier>{2f5dc7d3-f7fb-47b6-8eee-8f4feac1e176}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Teams functions\Connections">
+      <UniqueIdentifier>{f8cf47de-f8f4-43a8-ad9b-e57bdb49f6ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Teams functions\Search">
+      <UniqueIdentifier>{0047fd15-e15d-4161-9965-bea7c12f239b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Teachers functions">
+      <UniqueIdentifier>{a2e824ce-8dc1-4af0-9118-b6a497043f3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Teachers functions\Connections">
+      <UniqueIdentifier>{9884e529-cb5f-444c-a4d2-71d109878aa3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Students functions">
+      <UniqueIdentifier>{245ce411-1bd2-45f5-8124-f6eb3c59c9ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Students functions\Connections">
+      <UniqueIdentifier>{aabd35e2-af0c-48db-9daf-eed4418a92c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Search functions">
+      <UniqueIdentifier>{ed678e12-1a00-421a-9a4a-4c5505a55957}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MainMenus">
+      <UniqueIdentifier>{348cbd12-4b39-4433-ac7d-a2cf66382213}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\File exists function">
+      <UniqueIdentifier>{b95c1025-1e83-411f-8b20-3ccf986b5aaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Edit functions">
+      <UniqueIdentifier>{11605d38-4473-4236-80fc-465ba7c822e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Edit functions\Edits for students only">
+      <UniqueIdentifier>{79ae98ed-8998-423c-a084-ab1ad9461320}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Edit functions\Edits for teams only">
+      <UniqueIdentifier>{f1c7b88a-ad74-42b9-96f7-b10b69a6529f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Edit functions\Email edit connections">
+      <UniqueIdentifier>{7a035eb4-c751-4b46-8ad9-deaa7d76720c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Edit functions\Edits for teams only\Connections">
+      <UniqueIdentifier>{e99740c3-b6fc-4da3-8cd3-59b7e49c1d4c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Functions\Teams functions\teams_Edit.cpp">
+      <Filter>Source Files\Teams functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Teams functions\teams_Add.cpp">
+      <Filter>Source Files\Teams functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Teams functions\teams_Delete.cpp">
+      <Filter>Source Files\Teams functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Teams functions\Search\teams_SearchStudents.cpp">
+      <Filter>Source Files\Teams functions\Search</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Teams functions\Search\teams_SearchTeachers.cpp">
+      <Filter>Source Files\Teams functions\Search</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Teams functions\Connections\change_Students_Team.cpp">
+      <Filter>Source Files\Teams functions\Connections</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Teams functions\Connections\change_Students_Team_To_No.cpp">
+      <Filter>Source Files\Teams functions\Connections</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Teams functions\Connections\change_Teachers_Team.cpp">
+      <Filter>Source Files\Teams functions\Connections</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Teams functions\Connections\change_Teachers_Team_Down.cpp">
+      <Filter>Source Files\Teams functions\Connections</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Teachers functions\teachers_Add.cpp">
+      <Filter>Source Files\Teachers functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Teachers functions\teachers_Delete.cpp">
+      <Filter>Source Files\Teachers functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Teachers functions\teachers_Edit.cpp">
+      <Filter>Source Files\Teachers functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Teachers functions\Connections\remove_Deleted_Teacher_From_Team.cpp">
+      <Filter>Source Files\Teachers functions\Connections</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Students functions\students_Add.cpp">
+      <Filter>Source Files\Students functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Students functions\students_Delete.cpp">
+      <Filter>Source Files\Students functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Students functions\students_Edit.cpp">
+      <Filter>Source Files\Students functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Students functions\Connections\remove_Deleted_Student_From_Team.cpp">
+      <Filter>Source Files\Students functions\Connections</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Search functions\search_Students.cpp">
+      <Filter>Source Files\Search functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Search functions\search_Teachers.cpp">
+      <Filter>Source Files\Search functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Search functions\search_Teams.cpp">
+      <Filter>Source Files\Search functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\MainMenus\main_Menu.cpp">
+      <Filter>Source Files\MainMenus</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\MainMenus\search_Menu.cpp">
+      <Filter>Source Files\MainMenus</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\MainMenus\student_Edit_Menu.cpp">
+      <Filter>Source Files\MainMenus</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\MainMenus\student_Menu.cpp">
+      <Filter>Source Files\MainMenus</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\MainMenus\teacher_Edit_Menu.cpp">
+      <Filter>Source Files\MainMenus</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\MainMenus\teacher_Menu.cpp">
+      <Filter>Source Files\MainMenus</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\MainMenus\team_Edit_Menu.cpp">
+      <Filter>Source Files\MainMenus</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\MainMenus\team_Menu.cpp">
+      <Filter>Source Files\MainMenus</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\File exist functions\check_File_Exists.cpp">
+      <Filter>Source Files\File exists function</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Edit functions\edit_Email.cpp">
+      <Filter>Source Files\Edit functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Edit functions\edit_First_Name.cpp">
+      <Filter>Source Files\Edit functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Edit functions\edit_Second_Name.cpp">
+      <Filter>Source Files\Edit functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Edit functions\Email edit connections\edit_Email_Connections.cpp">
+      <Filter>Source Files\Edit functions\Email edit connections</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Edit functions\Edits for teams only\edit_Team_Name.cpp">
+      <Filter>Source Files\Edit functions\Edits for teams only</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Edit functions\Edits for teams only\Connections\edit_Student_Already_Has_Team.cpp">
+      <Filter>Source Files\Edit functions\Edits for teams only\Connections</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Edit functions\Edits for teams only\Connections\edit_Team_Classmates.cpp">
+      <Filter>Source Files\Edit functions\Edits for teams only\Connections</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Edit functions\Edits for teams only\Connections\edit_Team_Classmates_conections.cpp">
+      <Filter>Source Files\Edit functions\Edits for teams only\Connections</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Edit functions\Edits for teams only\Connections\edit_Team_Name_connections.cpp">
+      <Filter>Source Files\Edit functions\Edits for teams only\Connections</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Edit functions\Edits for teams only\Connections\edit_Team_Teachers.cpp">
+      <Filter>Source Files\Edit functions\Edits for teams only\Connections</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Edit functions\Edits for students only\edit_Students_Class.cpp">
+      <Filter>Source Files\Edit functions\Edits for students only</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Edit functions\Edits for students only\edit_Students_Preffered_Position.cpp">
+      <Filter>Source Files\Edit functions\Edits for students only</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

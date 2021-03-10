@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{405e9e1d-a8da-42e3-8089-c2a5c7e5763f}</ProjectGuid>
+    <RootNamespace>Studentsorterwithslnfile</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Functions\Edit functions\Edits for students only\edit_Students_Class.cpp" />
+    <ClCompile Include="Functions\Edit functions\Edits for students only\edit_Students_Preffered_Position.cpp" />
+    <ClCompile Include="Functions\Edit functions\Edits for teams only\Connections\edit_Student_Already_Has_Team.cpp" />
+    <ClCompile Include="Functions\Edit functions\Edits for teams only\Connections\edit_Team_Classmates.cpp" />
+    <ClCompile Include="Functions\Edit functions\Edits for teams only\Connections\edit_Team_Classmates_conections.cpp" />
+    <ClCompile Include="Functions\Edit functions\Edits for teams only\Connections\edit_Team_Name_connections.cpp" />
+    <ClCompile Include="Functions\Edit functions\Edits for teams only\Connections\edit_Team_Teachers.cpp" />
+    <ClCompile Include="Functions\Edit functions\Edits for teams only\edit_Team_Name.cpp" />
+    <ClCompile Include="Functions\Edit functions\edit_Email.cpp" />
+    <ClCompile Include="Functions\Edit functions\edit_First_Name.cpp" />
+    <ClCompile Include="Functions\Edit functions\edit_Second_Name.cpp" />
+    <ClCompile Include="Functions\Edit functions\Email edit connections\edit_Email_Connections.cpp" />
+    <ClCompile Include="Functions\File exist functions\check_File_Exists.cpp" />
+    <ClCompile Include="Functions\MainMenus\main_Menu.cpp" />
+    <ClCompile Include="Functions\MainMenus\search_Menu.cpp" />
+    <ClCompile Include="Functions\MainMenus\student_Edit_Menu.cpp" />
+    <ClCompile Include="Functions\MainMenus\student_Menu.cpp" />
+    <ClCompile Include="Functions\MainMenus\teacher_Edit_Menu.cpp" />
+    <ClCompile Include="Functions\MainMenus\teacher_Menu.cpp" />
+    <ClCompile Include="Functions\MainMenus\team_Edit_Menu.cpp" />
+    <ClCompile Include="Functions\MainMenus\team_Menu.cpp" />
+    <ClCompile Include="Functions\Search functions\search_Students.cpp" />
+    <ClCompile Include="Functions\Search functions\search_Teachers.cpp" />
+    <ClCompile Include="Functions\Search functions\search_Teams.cpp" />
+    <ClCompile Include="Functions\Students functions\Connections\remove_Deleted_Student_From_Team.cpp" />
+    <ClCompile Include="Functions\Students functions\students_Add.cpp" />
+    <ClCompile Include="Functions\Students functions\students_Delete.cpp" />
+    <ClCompile Include="Functions\Students functions\students_Edit.cpp" />
+    <ClCompile Include="Functions\Teachers functions\Connections\remove_Deleted_Teacher_From_Team.cpp" />
+    <ClCompile Include="Functions\Teachers functions\teachers_Add.cpp" />
+    <ClCompile Include="Functions\Teachers functions\teachers_Delete.cpp" />
+    <ClCompile Include="Functions\Teachers functions\teachers_Edit.cpp" />
+    <ClCompile Include="Functions\Teams functions\Connections\change_Students_Team.cpp" />
+    <ClCompile Include="Functions\Teams functions\Connections\change_Students_Team_To_No.cpp" />
+    <ClCompile Include="Functions\Teams functions\Connections\change_Teachers_Team.cpp" />
+    <ClCompile Include="Functions\Teams functions\Connections\change_Teachers_Team_Down.cpp" />
+    <ClCompile Include="Functions\Teams functions\Search\teams_SearchStudents.cpp" />
+    <ClCompile Include="Functions\Teams functions\Search\teams_SearchTeachers.cpp" />
+    <ClCompile Include="Functions\Teams functions\teams_Add.cpp" />
+    <ClCompile Include="Functions\Teams functions\teams_Delete.cpp" />
+    <ClCompile Include="Functions\Teams functions\teams_Edit.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
