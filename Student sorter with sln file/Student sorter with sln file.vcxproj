@@ -160,13 +160,17 @@
     <ClCompile Include="Functions\MainMenus\teacher_Menu.cpp" />
     <ClCompile Include="Functions\MainMenus\team_Edit_Menu.cpp" />
     <ClCompile Include="Functions\MainMenus\team_Menu.cpp" />
+    <ClCompile Include="Functions\Search functions\search_Preffered_Position.cpp" />
     <ClCompile Include="Functions\Search functions\search_Students.cpp" />
     <ClCompile Include="Functions\Search functions\search_Teachers.cpp" />
+    <ClCompile Include="Functions\Search functions\search_Teachers_With_No_Team.cpp" />
     <ClCompile Include="Functions\Search functions\search_Teams.cpp" />
+    <ClCompile Include="Functions\Students functions\Connections\connections_Student_Exists.cpp" />
     <ClCompile Include="Functions\Students functions\Connections\remove_Deleted_Student_From_Team.cpp" />
     <ClCompile Include="Functions\Students functions\students_Add.cpp" />
     <ClCompile Include="Functions\Students functions\students_Delete.cpp" />
     <ClCompile Include="Functions\Students functions\students_Edit.cpp" />
+    <ClCompile Include="Functions\Teachers functions\Connections\connections_Teacher_Email_Already_Exists.cpp" />
     <ClCompile Include="Functions\Teachers functions\Connections\remove_Deleted_Teacher_From_Team.cpp" />
     <ClCompile Include="Functions\Teachers functions\teachers_Add.cpp" />
     <ClCompile Include="Functions\Teachers functions\teachers_Delete.cpp" />

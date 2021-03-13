@@ -186,5 +186,17 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Functions\Search functions\search_Preffered_Position.cpp">
+      <Filter>Source Files\Search functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Search functions\search_Teachers_With_No_Team.cpp">
+      <Filter>Source Files\Search functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Students functions\Connections\connections_Student_Exists.cpp">
+      <Filter>Source Files\Students functions\Connections</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions\Teachers functions\Connections\connections_Teacher_Email_Already_Exists.cpp">
+      <Filter>Source Files\Teachers functions\Connections</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
