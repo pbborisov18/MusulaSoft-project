@@ -8,6 +8,8 @@ void mainMenu();    //Link to main menu function
 bool searchStudent(string searchTerm);  //Link to function which searches Students.csv
 bool searchTeacher(string searchTerm);  //Link to function which searches Teachers.csv
 bool searchTeam(string searchTerm); //Link to function which searches Teams.csv
+void searchPrefferedPosition(string searchTerm);
+void searchTeachersWithoutTeam();
 
 void searchMenu(){
 
@@ -17,13 +19,15 @@ void searchMenu(){
     cout << "1.Search students \n";
     cout << "2.Search teachers \n";
     cout << "3.Search teams \n";
-    cout << "4.Go back to Team Sorter\n";
+    cout << "4.Search students with certain roles\n";
+    cout << "5.Search for teachers without teams\n";
+    cout << "6.Go back to Team Sorter\n";
 
     int chooserSearch;
     cin >> chooserSearch; // User choosing what he wants to search for
 
-    while(cin.fail() || chooserSearch < 1 || chooserSearch > 4){ //Proofing the user doesn't choose a number not mentioned or a letter. Allows the user to re-enter
-    cout << "ERROR -- You did not enter an integer or you didn't enter a number between 1-4" << endl;
+    while(cin.fail() || chooserSearch < 1 || chooserSearch > 6){ //Proofing the user doesn't choose a number not mentioned or a letter. Allows the user to re-enter
+    cout << "ERROR -- You did not enter an integer or you didn't enter a number between 1-6" << endl;
     cin.clear();
     cin.sync();
     cin >> chooserSearch;
@@ -80,6 +84,37 @@ void searchMenu(){
     }
 
     if(chooserSearch == 4){
+        system("cls");
+        fileExists("Students.csv");
+
+        cout << "Enter student's preferred position: ";
+
+        string prefpos;
+        cin.ignore(1000,'\n');
+        getline(cin,prefpos);
+
+        searchPrefferedPosition(prefpos);
+
+        system("pause");
+
+        searchMenu();
+
+    }
+
+    if(chooserSearch == 5){
+        system("cls");
+        fileExists("Teachers.csv");
+
+        cout << "Teachers without teams\n" << endl;
+
+        searchTeachersWithoutTeam();
+
+        system("pause");
+
+        searchMenu();
+    }
+
+    if(chooserSearch == 6){
         system("cls");  //Clears the console using system() not recommended because of incompatibility with os other than windows
         mainMenu(); //Goes back to the main menu
     }

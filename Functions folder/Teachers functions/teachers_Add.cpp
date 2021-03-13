@@ -5,6 +5,7 @@ using namespace std;
 
 void fileExists(string test);   //Link to a function which checks if a file is created
 void teacherMenu(); //Link to last menu
+bool connectionsTeachersEmailAlreadyExists(string searchTerm);
 
 struct TEACHERS{    //Structure used for entering teachers information
     string firstName;
@@ -20,6 +21,11 @@ void teachersAdd(){
     cin >> teacher.lastName;
     cout << "Enter Email:";
     cin >> teacher.eMail;
+    if(connectionsTeachersEmailAlreadyExists(teacher.eMail)==true){
+        cout << "\nTeacher with that email already exists\n\n";
+        system("pause");
+        teacherMenu();
+    }
     cout << "In how many teams:";
     cin >> teacher.inUse;
     while(teacher.inUse<0){

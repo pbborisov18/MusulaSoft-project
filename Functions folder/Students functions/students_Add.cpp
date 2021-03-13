@@ -1,10 +1,12 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <bits/stdc++.h>
 using namespace std;
 
 void fileExists(string test);   //Link to a function which checks if a file is created
 void studentMenu(); //Link to last menu
+bool connectionsStudentExists(string studentEmail);
 
 struct STUDENTS{    //Structure used for entering students information
     string firstName;
@@ -24,8 +26,15 @@ void studentsAdd(){
     cin >> student.lastName;
     cout << "Enter Email:";
     cin >> student.eMail;
+    if(connectionsStudentExists(student.eMail)==true){
+        cout << "\nStudent with that email already exists\n\n";
+        system("pause");
+        studentMenu();
+    }
     cout << "Enter Student's preferred role:";
-    cin >> student.prefferedPos;
+    cin.ignore(1000, '\n');
+    getline(cin,student.prefferedPos);
+    transform(student.prefferedPos.begin(), student.prefferedPos.end(), student.prefferedPos.begin(), ::tolower);
     cout << "Enter Student's class(Letter):";
     cin >> student.fromClass;
     cout << "Team(No if he isn't in a team):";
